@@ -3,7 +3,8 @@ import {
   StyleSheet,
   Text,
   View,
-  Image
+  Image,
+  TouchableOpacity
 } from 'react-native';
 import MiddleDtata from './MiddleDtata.json'
 export default class MiddleView extends Component {
@@ -37,18 +38,27 @@ class InnerView extends Component {
     };
     render() {
       return (
-        <View style={styles.container}>
-          <Image source={{uri:this.props.iconName}}  style={{width:30,height:20}}/>
-          <Text>{this.props.title}</Text>
-        </View>
+        <TouchableOpacity>
+            <View style={styles.itemMiddle}>
+            <Image source={{uri:this.props.iconName}}  style={{width:30,height:20,marginBottom:5}}/>
+            <Text>{this.props.title}</Text>
+            </View>
+        </TouchableOpacity>
       );
     }
   }
 const styles = StyleSheet.create({
   container: {
     flexDirection:'row',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     backgroundColor: 'white',
+   
+    
+  },
+  itemMiddle:{
+    height:50,
+    justifyContent: 'center',
+    alignItems:'center',
   },
   welcome: {
     fontSize: 20,
