@@ -9,19 +9,19 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  ScrollView
 } from 'react-native';
 
 export default class Shop extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-            Shop
-        </Text>
+        
       </View>
     );
   }
+  
 }
 
 const styles = StyleSheet.create({

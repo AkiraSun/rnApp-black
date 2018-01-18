@@ -19,6 +19,7 @@ import {
   ScrollView
 } from 'react-native';
 import CommonMyCell from './2cmCommonMyCell'
+import HeaderView from './2cmHeaderView'
 import MiddleView from './2cmMiddleView'
 var {width,height} = Dimensions.get('window')
 export default class Mine extends Component {
@@ -27,6 +28,7 @@ export default class Mine extends Component {
     return (
       <View style={styles.container}>
         {this.renderNavbar()}
+        <HeaderView/>
         <ScrollView
           style={styles.scrollViewStyle}
         >
